@@ -9,7 +9,7 @@ module.exports = Queue = function() {
   vm.queue = [];
   vm.currentDispatcher = undefined;
 
-  Helper.keys('+', ['maxlen', 'skipmajority']).then(values => {
+  Helper.keys('queue', ['maxlen', 'skipmajority']).then(values => {
     vm.maxlen = values.maxlen;
     vm.skipmajority = values.skipmajority;
   }).catch(err => {
