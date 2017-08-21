@@ -35,9 +35,8 @@ var commands = {
   }
 };
 
-Bot.on('ready', () => {
-  Bot.user.setGame('TEST123')
-});
+bot.setPlayingGame("TEST123")
+Bot.setPlayingGame("TEST321")
 Bot.on('message', message => {
   WordService.registerMessage(message);
 
