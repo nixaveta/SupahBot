@@ -4,11 +4,16 @@ var Helper = require('./components/helper.js');
 var Queue = require('./components/queue.js');
 var TrackHelper = require('./components/trackhelper.js');
 var WordService = require('./components/wordservice.js');
+var WeatherService = require('./components/weatherservice.js');
 
 var commands = {
   '!video': {
     execute: getVideo,
     description: 'get a youtube video by search word'
+  },
+  '!weather': {
+    execute: getWeather,
+    description: 'get current weather for the given city, defaults to Stockholm'
   },
   '!roll': {
     execute: roll,
@@ -21,7 +26,7 @@ var commands = {
     execute: countWordsByUser,
     description: 'get the most popular words for user of the given username, defaults to your username'
   },
-  '!queue': {
+  '...': {
     execute: doQueue,
     description: 'queue your song'
   },
@@ -35,7 +40,6 @@ var commands = {
   }
 };
 
-bot.user.setStatus("dfsadasd")
 Bot.on('message', message => {
   WordService.registerMessage(message);
 
