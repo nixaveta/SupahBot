@@ -4,16 +4,11 @@ var Helper = require('./components/helper.js');
 var Queue = require('./components/queue.js');
 var TrackHelper = require('./components/trackhelper.js');
 var WordService = require('./components/wordservice.js');
-var WeatherService = require('./components/weatherservice.js');
 
 var commands = {
   '!video': {
     execute: getVideo,
     description: 'get a youtube video by search word'
-  },
-  '!weather': {
-    execute: getWeather,
-    description: 'get current weather for the given city, defaults to Stockholm'
   },
   '!roll': {
     execute: roll,
