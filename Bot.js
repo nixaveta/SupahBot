@@ -26,7 +26,7 @@ var commands = {
     execute: countWordsByUser,
     description: 'get the most popular words for user of the given username, defaults to your username'
   },
-  '!queue': {
+  '+': {
     execute: doQueue,
     description: 'queue your song'
   },
