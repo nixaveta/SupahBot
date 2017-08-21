@@ -40,10 +40,7 @@ var commands = {
   }
 };
 
-  bot.on('ready', () => {
-  bot.user.setGame('tesssttt')
-  
-  Bot.on('message', message => {
+Bot.on('message', message => {
   WordService.registerMessage(message);
 
   if (isBotCommand(message)) {
