@@ -35,8 +35,7 @@ var commands = {
   }
 };
 
-bot.setPlayingGame("TEST123")
-Bot.setPlayingGame("TEST321")
+bot.user.setStatus("dfsadasd")
 Bot.on('message', message => {
   WordService.registerMessage(message);
 
